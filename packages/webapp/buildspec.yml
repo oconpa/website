@@ -1,0 +1,18 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - npm i -g pnpm && pnpm i
+      # - npx @aws-amplify/cli codegen
+
+  build:
+    commands:
+      - pnpm build
+
+  post_build:
+    commands:
+      - (cd dist && zip -r ../dist.zip .)
+      - export BUILD_TIME=$(date +%Y-%m-%dT%H:%M:%S)
+      - aws s3 cp ./dist.zip $BUILD_BUCKET/$BUILD_TIME.zip
+      - aws amplify start-deployment --app-id $APP_ID --branch-name $BRANCH_NAME --source-url $BUILD_BUCKET/$BUILD_TIME.zip

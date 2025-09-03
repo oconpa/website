@@ -1,0 +1,11 @@
+{
+  "name": "patrick-portfolio",
+  "version": "1.0.0",
+  "author": "Patrick O'Connor",
+  "description": "Personal website showcasing Patrick's work.",
+  "license": "Apache-2.0",
+  "scripts": {
+    "dev": "pnpm --filter webapp dev",
+    "cdk": "pnpm --filter infra cdk"
+  }
+}

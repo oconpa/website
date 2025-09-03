@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+:root {
+  --accent: oklch(0.8 0.15 85);
+  --accent-foreground: oklch(0.35 0 0);
+  --silence: rgb(158, 158, 158);
+}
+
+@theme inline {
+  --color-accent: var(--accent);
+  --color-silence: var(--silence);
+}
