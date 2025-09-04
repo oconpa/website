@@ -74,13 +74,13 @@ export const App = () => {
             viewport={{ once: true }}
           >
             <p className="text-silence! mb-4!">
-              Patrick is a Senior AI Prototyping Engineer at AWS, where he
-              builds cutting-edge generative AI solutions and end-to-end
-              prototypes in the cloud
+              I'm a Senior AI Prototyping Engineer at AWS, where I build
+              cutting-edge generative AI solutions and end-to-end prototypes in
+              the cloud
             </p>
 
             <p className="text-silence! mb-4!">
-              He specializes in implmenting large language models and
+              My specialty lies in implmenting large language models and
               distributed AI systems, while bringing expertise in IoT,
               serverless technologies and high-performance computing to solve
               complex enterprise challenges.
@@ -243,7 +243,7 @@ export const App = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="flex gap-6 justify-center"
+          className="flex gap-6 justify-center flex-col md:flex-row"
         >
           <a href="mailto:oconpa@gmail.com">
             <Button
